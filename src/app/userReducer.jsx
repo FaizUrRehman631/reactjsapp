@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async ()=>{
-    const response = await fetch("https://github.com/FaizUrRehman631/laravel_website");
+    const response = await fetch("http://127.0.0.1:8000/api/students");
     const data = await response.json();
     // console.log("Data fetched from an API",data.data);
     return data?.data;
